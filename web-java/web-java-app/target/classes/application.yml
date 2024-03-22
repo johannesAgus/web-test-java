@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: web-java-app
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/java-test-web
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: P@ssw0rd
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  servlet:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 1MB
+
+server:
+  port: 9006
+  error:
+    include-message: always
+
+logging:
+  level:
+    com.test.java: DEBUG
+    org.hibernate: ERROR
+    org.springframework: INFO

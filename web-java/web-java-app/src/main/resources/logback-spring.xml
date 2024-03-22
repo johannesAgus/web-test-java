@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <springProperty scope="context" name="appName" source="spring.application.name" defaultValue="logFile"/>
+
+    <property name="pattern"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [${appName}:%X{X-B3-TraceId:-}:%X{X-B3-SpanId:-}:%X{X-Span-Export:-}] [%-5level] %logger{36}.%M:%line - %msg%n"/>
+    <property name="logPath" value="logs/"/>
+
+    <springProfile name="default,dev">
+        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${pattern}</pattern>
+            </encoder>
+        </appender>
+        <root level="info">
+            <appender-ref ref="STDOUT"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="sit,prod">
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${logPath}/${appName}.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${logPath}/${appName}.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>7</maxHistory>
+                <totalSizeCap>3GB</totalSizeCap>
+            </rollingPolicy>
+            <encoder>
+                <pattern>${pattern}</pattern>
+            </encoder>
+        </appender>
+        <root level="info">
+            <appender-ref ref="FILE"/>
+        </root>
+    </springProfile>
+    <logger name="javax.crypto" level="debug"/>
+    <logger name="com.test.java" level="debug"/>
+    <logger name="org.hibernate.SQL" level="debug"/>
+    <logger name="org.springframework.security" level="debug"/>
+
+</configuration>
