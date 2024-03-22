@@ -62,7 +62,7 @@
     </dependencies>
 
     <build>
-        <finalName>sg-mentoring-v2-app</finalName>
+        <finalName>web-java-app</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
