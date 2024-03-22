@@ -1,0 +1,945 @@
+{
+	"info": {
+		"_postman_id": "d8fcccb9-daa9-428e-a106-732470680cbe",
+		"name": "Test Web Java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15237414"
+	},
+	"item": [
+		{
+			"name": "User Admin",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Johannes Agus Subagio\",\r\n    \"username\": \"thry\",\r\n    \"email\": \"johannes.agus@gmail.com\",\r\n    \"password\":\"P@ssw0rd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9006/api/v1/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Johannes Agus Subagio\",\r\n    \"username\": \"thry\",\r\n    \"email\": \"johannes.agus@gmail.com\",\r\n    \"password\":\"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9006/api/v1/user/",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"2454e17b-496a-42a3-b308-32f36e311409\",\r\n    \"name\": \"Johannes Agus Subagio\",\r\n    \"username\": \"Thry\",\r\n    \"email\": \"johannes.agus@gmail.com\",\r\n    \"password\":\"P@ssw0rd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9006/api/v1/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"44c954cd-c34a-4fbc-b8ca-46830b61559b\",\r\n    \"firstName\": \"Johannes\",\r\n    \"middleName\": \"Agus\",\r\n    \"lastName\": \"Subagio\",\r\n    \"email\": \"jas@gmail.com\",\r\n    \"address\": \"new place\",\r\n    \"countryAddress\":\"IND\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9006/login/user",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"login",
+										"user"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "38792795-e8b6-42c4-bd72-2043a6c9f2df",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9006/api/v1/user/7e551c5a-6d95-41d4-bba2-ebf8c5de4f2e",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"7e551c5a-6d95-41d4-bba2-ebf8c5de4f2e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:9006/api/v1/user/7e551c5a-6d95-41d4-bba2-ebf8c5de4f2e",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"7e551c5a-6d95-41d4-bba2-ebf8c5de4f2e"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Find Search",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9006/api/v1/user/?page=1&size=10",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Admin",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find Search",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9006/api/v1/user/?page=1&size=10",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "firstName",
+											"value": "Admin",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Find By User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9006/api/v1/user/2454e17b-496a-42a3-b308-32f36e311409",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"2454e17b-496a-42a3-b308-32f36e311409"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find By User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9006/api/v1/user/2454e17b-496a-42a3-b308-32f36e311409",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"2454e17b-496a-42a3-b308-32f36e311409"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "memberDto",
+									"value": "{\n    \"name\": \"Johannes Agus Subagio\",\n    \"password\": \"P@ssw0rd\",\n    \"phoneNumber\": \"082154822408\",\n    \"dateOfBirth\": \"13 Agustus 1996\",\n    \"email\": \"johannes.agus@gmail.com\",\n    \"gender\": \"Male\",\n    \"idKTP\": \"1272051308960003\"\n}",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "multipartFile",
+									"type": "file",
+									"src": "/C:/Users/jagus/Downloads/SLamaran/3.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:9006/api/v1/member/",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"member",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Johannes Agus Subagio\",\r\n    \"username\": \"thry\",\r\n    \"email\": \"johannes.agus@gmail.com\",\r\n    \"password\":\"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9006/api/v1/user/",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "memberDto",
+									"value": "{\n    \"id\": \"8a5063b1-6cb3-4ecc-ad6f-b984459fddf5\",\n    \"name\": \"Test Member 1\",\n    \"password\": \"pwd\",\n    \"phoneNumber\": \"08521\",\n    \"dateOfBirth\": \"170795\",\n    \"email\": \"jas_j@gmail.com\",\n    \"gender\": \"Male\",\n    \"idKTP\": \"1201111\"\n}",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "multipartFile",
+									"type": "file",
+									"src": "/C:/Users/jagus/Downloads/photo_2024-02-16_00-48-26.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:9006/api/v1/member/",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"member",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "memberDto",
+											"value": "{\n    \"id\": \"8a5063b1-6cb3-4ecc-ad6f-b984459fddf5\",\n    \"name\": \"Test Member 1\",\n    \"password\": \"pwd\",\n    \"phoneNumber\": \"08521\",\n    \"dateOfBirth\": \"170795\",\n    \"email\": \"jas_j@gmail.com\",\n    \"gender\": \"Male\",\n    \"idKTP\": \"1201111\"\n}",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "multipartFile",
+											"type": "file",
+											"src": "/C:/Users/jagus/Downloads/photo_2024-02-16_00-48-26.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:9006/api/v1/member/",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"api",
+										"v1",
+										"member",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9006/api/v1/member/8a5063b1-6cb3-4ecc-ad6f-b984459fddf5",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"member",
+								"8a5063b1-6cb3-4ecc-ad6f-b984459fddf5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:9006/api/v1/member/8a5063b1-6cb3-4ecc-ad6f-b984459fddf5",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"api",
+										"v1",
+										"member",
+										"8a5063b1-6cb3-4ecc-ad6f-b984459fddf5"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Find Search",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9006/api/v1/member/?page=1&size=10",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"member",
+								""
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Admin",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find Search",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9006/api/v1/member/?page=1&size=10",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"api",
+										"v1",
+										"member",
+										""
+									],
+									"query": [
+										{
+											"key": "firstName",
+											"value": "Admin",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Find By Member",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9006/api/v1/member/41c1fb00-a13f-49c6-9cc4-d2461e0c7048",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"member",
+								"41c1fb00-a13f-49c6-9cc4-d2461e0c7048"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find By Member",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9006/api/v1/member/41c1fb00-a13f-49c6-9cc4-d2461e0c7048",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"api",
+										"v1",
+										"member",
+										"41c1fb00-a13f-49c6-9cc4-d2461e0c7048"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Find Foto Member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9006/api/v1/member/getFileByName/3.jpg",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"member",
+								"getFileByName",
+								"3.jpg"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find Foto Member",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9006/api/v1/member/getFileByName/3.jpg",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"api",
+										"v1",
+										"member",
+										"getFileByName",
+										"3.jpg"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "List Member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9006/api/v1/member/list",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"member",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Member",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9006/api/v1/member/list",
+									"host": [
+										"localhost"
+									],
+									"port": "9006",
+									"path": [
+										"api",
+										"v1",
+										"member",
+										"list"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"johannes.agus@gmail.com\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9006/login/member",
+					"host": [
+						"localhost"
+					],
+					"port": "9006",
+					"path": [
+						"login",
+						"member"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@sgmentoringv2.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9006/login/user",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"login",
+								"user"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Login Member",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@sgmentoringv2.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9006/login/member",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"login",
+								"member"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Export Excel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9006/api/v1/export/excel",
+					"host": [
+						"localhost"
+					],
+					"port": "9006",
+					"path": [
+						"api",
+						"v1",
+						"export",
+						"excel"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Export Excel",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9006/api/v1/export/excel",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"export",
+								"excel"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Export PDF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9006/api/v1/export/pdf",
+					"host": [
+						"localhost"
+					],
+					"port": "9006",
+					"path": [
+						"api",
+						"v1",
+						"export",
+						"pdf"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Export Excel",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9006/api/v1/export/excel",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"api",
+								"v1",
+								"export",
+								"excel"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
